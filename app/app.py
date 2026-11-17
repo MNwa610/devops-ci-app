@@ -18,7 +18,7 @@ def create_app():
     @flask_app.get("/health")
     def health():
         """Возвращает состояние приложения."""
-        return jsonify(status="unhealthy")
+        return jsonify(status="ok")
 
     return flask_app
 
