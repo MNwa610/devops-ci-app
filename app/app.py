@@ -7,6 +7,7 @@ def create_app():
     """Создание и настройка Flask-приложения."""
     app = Flask(__name__)
 
+
     @app.get("/")
     def index():
         """Возвращает информацию о приложении."""
@@ -14,6 +15,7 @@ def create_app():
             service="devops-ci-app",
             version="1.0.0",
         )
+
 
     @app.get("/health")
     def health():
