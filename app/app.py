@@ -5,10 +5,9 @@ from flask import Flask, jsonify
 
 def create_app():
     """Создание и настройка Flask-приложения."""
-    app = Flask(__name__)
+    flask_app = Flask(__name__)
 
-
-    @app.get("/")
+    @flask_app.get("/")
     def index():
         """Возвращает информацию о приложении."""
         return jsonify(
@@ -16,13 +15,12 @@ def create_app():
             version="1.0.0",
         )
 
-
-    @app.get("/health")
+    @flask_app.get("/health")
     def health():
         """Возвращает состояние приложения."""
         return jsonify(status="ok")
 
-    return app
+    return flask_app
 
 
 app = create_app()
