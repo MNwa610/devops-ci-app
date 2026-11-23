@@ -31,4 +31,4 @@ def test_index(client):
 
     data = response.get_json()
     assert data["service"] == "devops-ci-app"
-    assert data["version"] == "1.0.0"
+    assert data["version"] == "1.1.0-tseplyaev"

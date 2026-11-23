@@ -12,7 +12,7 @@ def create_app():
         """Возвращает информацию о приложении."""
         return jsonify(
             service="devops-ci-app",
-            version="1.0.0",
+            version="1.1.0-tseplyaev",
         )
 
     @flask_app.get("/health")
